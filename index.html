@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <title>LTIMindtree Jobposts</title>
+</head>
+
+<body class="overhidden-x-flow">
+    <nav class="mx-auto p-6">
+        <!-- Flex Container For Nav Items -->
+        <div class="flex items-center justify-between space-x-20 my-6">
+            <!-- Logo -->
+            <div class="z-30">
+                <img class="h-16 w-32" src="images/logo-etech.png" alt="" id="logo" />
+            </div>
+
+            <!-- Menu Items -->
+            <div class="hidden items-center space-x-10 text-grayishBlue lg:flex">
+                <div class="hidden items-center space-x-2 text-grayishBlue md:flex">
+                    <a href="#job" class="text-softBlue hover:text-softRed">Job</a>
+                    <div class="hidden items-center space-x-2 text-grayishBlue md:flex">
+                        |
+                    </div>
+                    <a href="#company" class="text-softBlue hover:text-softRed">Company</a>
+                </div>
+                <div class="hidden items-center space-x-2 text-grayishBlue md:flex">
+                    <a href="#signin" class="text-softBlue hover:text-softRed">Signin</a>
+                    <div class="hidden items-center space-x-2 text-grayishBlue md:flex">
+                        |
+                    </div>
+                    <a href="#register" class="text-softBlue hover:text-softRed">Register</a>
+                </div>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button id="menu-btn" class="z-30 block md:hidden focus:outline-none hamburger">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="menu"
+            class="fixed inset-0 z-20 hidden flex-col items-center self-end w-full h-full m-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-veryDarkBlue">
+            <div class="w-full py-3 text-center">
+                <a href="#jobs" class="block hover:text-softRed">Jobs</a>
+            </div>
+            <div class="w-full py-3 text-center">
+                <a href="#company" class="block hover:text-softRed">Company</a>
+            </div>
+            <div class="w-full py-3 text-center">
+                <a href="#signin" class="block hover:text-softRed">Signin</a>
+            </div>
+            <div class="w-full py-3 text-center">
+                <a href="#register" class="block hover:text-softRed">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto mb-10 px-6">
+        <h3 class="mb-6 text-[#000080] text-[32px] font-semibold text-center">
+            Find Your Perfect Job Match
+        </h3>
+    </div>
+
+    <section id="searchBar">
+        <div class="flex flex-row h-32 justify-center md:h-12">
+            <form id="link-form"
+                class="relative flex flex-col border-2 items-center justify-center space-y-4 rounded-3xl md:flex-row md:space-y-0 md:space-x-2">
+                <div class="flex items-center p-2 rounded-3xl w-80 md:flex md:mb-0">
+                    <button class="px-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 duration-200 hover:scale-110"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <circle cx="10" cy="10" r="6"></circle>
+                            <line x1="20" y1="21" x2="15" y2="15"></line>
+                        </svg>
+                    </button>
+                    <input type="text" class="flex-1 ml-4 border-none placeholder-gray-500 focus:outline-none md:w-80"
+                        placeholder="Enter skills / designation / companies" "
+                  id=" link-input" />
+                </div>
+
+                <div class="border-solid border-2 w-80 border-[#EEEEEE] md:hidden "></div>
+
+                <div class="flex flex-col items-center justify-end p-2 md:flex-row md:space-y-0">
+                    <div class="flex items-center">
+                        <div class="hidden border-2 ml-1.5 w-0 h-8 border-[[#EEEEEE]] md:flex"></div>
+                        <div class="py-0 mx-4 text-[#000080] md:py-2 hover:scale-110">
+                            <h4 class="text-sm font-semibold">Select Experience</h4>
+                         </div>
+                        <div
+                            class="mt-1 mr-12 h-0 w-2 border-x-8 rotate-180 border-x-transparent border-b-[12px] border-[#000080]">
+                        </div>
+                        <button
+                            class="h-8 px-10 text-white bg-blue-500 text-[16px] font-semibold rounded-3xl hover:bg-blue-900 hover:scale-110 focus:outline-none md:py-1 ">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <div class="grid gap-4 mx-20 mt-24 border-[#D9D9D9] md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 md:mx-40">
+        <div class="px-3 py-3 mt-3 border-2 border-[#D9D9D9] rounded-tr-xl rounded-bl-xl bg-white hover:scale-110">
+            <p class="text-center text-blue-800 font-semibold text-sm">
+                User Interface
+            </p>
+        </div>
+
+        <div class="px-3 py-3 mt-3 border-2 border-[#D9D9D9] rounded-tr-xl rounded-bl-xl bg-white hover:scale-110">
+            <p class="text-center text-blue-800 font-semibold text-sm">
+                Web Developmemt
+            </p>
+        </div>
+        <div class="px-3 py-3 mt-3 border-2 border-[#D9D9D9] rounded-tr-xl rounded-bl-xl bg-white hover:scale-110">
+            <p class="text-center text-blue-800 font-semibold text-sm">React</p>
+        </div>
+        <div class="px-3 py-3 mt-3 border-2 border-[#D9D9D9] rounded-tr-xl rounded-bl-xl bg-white hover:scale-110">
+            <p class="text-center text-blue-800 font-semibold text-sm">
+                Angular
+            </p>
+        </div>
+        <div class="px-3 py-3 mt-3 border-2 border-[#D9D9D9] rounded-tr-xl rounded-bl-xl bg-white hover:scale-110">
+            <p class="text-center text-blue-800 font-semibold text-sm">MEAN</p>
+        </div>
+        <div class="px-3 py-3 mt-3 border-2 border-[#D9D9D9] rounded-tr-xl rounded-bl-xl bg-white hover:scale-110">
+            <p class="text-center text-blue-800 font-semibold text-sm">MERN</p>
+        </div>
+        <div class="px-3 py-3 mt-3 border-2 border-[#D9D9D9] rounded-tr-xl rounded-bl-xl bg-white hover:scale-110">
+            <p class="text-center text-blue-800 font-semibold text-sm">
+                Node JS
+            </p>
+        </div>
+
+        <div class="px-3 py-3 mt-3 border-2 border-[#D9D9D9] rounded-tr-xl rounded-bl-xl bg-white hover:scale-110">
+            <p class="text-center text-blue-800 font-semibold text-sm">
+                Microservice
+            </p>
+        </div>
+
+        <div class="px-3 py-3 mt-3 border-2 border-[#D9D9D9] rounded-tr-xl rounded-bl-xl bg-white hover:scale-110">
+            <p class="text-center text-blue-800 font-semibold text-sm">
+                Dev OPS
+            </p>
+        </div>
+
+        <div class="px-3 py-3 mt-3 border-2 rounded-tr-xl rounded-bl-xl bg-white hover:scale-110">
+            <div class="text-center text-blue-800 font-semibold text-sm">
+                Cloud Computing
+            </div>
+        </div>
+
+        <div class="px-3 py-3 mt-3 border-2 border-[#D9D9D9] rounded-tr-xl rounded-bl-xl bg-white hover:scale-110">
+            <p class="text-center text-blue-800 font-semibold text-sm">
+                Docker
+            </p>
+        </div>
+        <div class="px-3 py-3 mt-3 border-2 border-[#D9D9D9] rounded-tr-xl rounded-bl-xl bg-white hover:scale-110">
+            <p class="text-center text-blue-800 font-semibold text-sm">
+                Web Designer
+            </p>
+        </div>
+    </div>
+
+    <div class="grid gap-4 m-10 mx-20 md:grid-cols-5 lg:grid-cols-5 xl:grid-cols-5">
+        <div class="bg-white border-2 rounded-xl justify-center">
+            <div class="p-1 mx-3 mt-3 rounded-t-xl">
+                <div class="flex justify-center">
+                    <img class="w-25 h-16" src="./images/Cisco-logo.png" alt="" />
+                </div>
+                <div class="flex justify-center py-4">
+                    <div class="flex justify-center w-16 h-16 rounded-full bg-[#00ccff]">
+                        <p class="text-white font-normal text-4xl m-3">50+</p>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <p class="m-2 text-center text-blue-900">
+                        Leading computer networking products.
+                    </p>
+                </div>
+
+                <div class="flex justify-center">
+                    <button
+                        class="inline-block px-10 py-1 my-4 mb-0 text-center text-white bg-[#0066ff] rounded-xl font-semibold duration-200 hover:bg-violet-800 hover:border-violet-800 hover:scale-110">
+                        View Job
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white-100 border-2 rounded-xl">
+            <div class="p-1 mx-3 mt-3 rounded-t-xl">
+                <div class="flex justify-center">
+                    <img class="w-25 h-16" src="./images/ge-log.png" alt="" />
+                </div>
+                <div class="flex justify-center py-4">
+                    <div class="flex justify-center w-16 h-16 rounded-full bg-[#006699]">
+                        <p class="text-white font-normal text-4xl m-3">40+</p>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <p class="m-2 text-center text-blue-900">
+                        Leading multinational congolomerate company.
+                    </p>
+                </div>
+                <div class="flex justify-center mb-1">
+                    <button
+                        class="inline-block px-10 py-1 my-4 mb-0 text-center text-white bg-[#0066ff] font-semibold rounded-xl duration-200 hover:bg-violet-800 hover:border-violet-800 hover:scale-110">
+                        View Job
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white border-2 rounded-xl text-white">
+            <div class="p-1 mx-3 mt-3 rounded-t-xl">
+                <div class="flex justify-center">
+                    <img class="w-20 h-16" src="./images/pepsico-logo.png" alt="" />
+                </div>
+                <div class="flex justify-center py-4">
+                    <div class="flex justify-center w-16 h-16 rounded-full bg-[#ff3300]">
+                        <p class="text-white font-normal text-4xl m-3">32+</p>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <p class="m-2 text-center text-blue-900">
+                        Pepsico, American food and beverage company.
+                    </p>
+                </div>
+
+                <div class="flex justify-center">
+                    <button
+                        class="inline-block px-10 py-1 my-4 mb-0 text-center text-white bg-[#0066ff] font-semibold rounded-xl duration-200 hover:bg-violet-800 hover:border-violet-800 hover:scale-110">
+                        View Job
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white border-2 rounded-xl text-white">
+            <div class="p-1 mx-3 mt-3 rounded-t-xl">
+                <div class="flex justify-center">
+                    <img class="w-20 h-16" src="./images/microsoft-logo.png" alt="" />
+                </div>
+                <div class="flex justify-center py-4">
+                    <div class="flex justify-center w-16 h-16 rounded-full bg-[#00cc00]">
+                        <p class="text-white font-normal text-4xl m-3">78+</p>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <p class="m-2 text-center text-blue-900">
+                        Microsoft is the largest vendor of comp software
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <button
+                        class="inline-block px-10 py-1 my-4 mb-0 text-center text-white bg-[#0066ff] font-semibold rounded-xl duration-200 hover:bg-violet-800 hover:border-violet-800 hover:scale-110">
+                        View Job
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white border-2 rounded-xl text-white">
+            <div class="p-1 mx-3 mt-3 rounded-t-xl">
+                <div class="flex justify-center p-3">
+                    <img class="w-20 h-10" src="./images/google-logo.png" alt="" />
+                </div>
+                <div class="flex justify-center p-4">
+                    <div class="flex justify-center w-16 h-16 rounded-full bg-[#e6e600]">
+                        <p class="text-white font-normal text-4xl m-3">89+</p>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <p class="m-2 text-blue-900">
+                        American multinational technology company.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <button
+                        class="inline-block px-10 py-1 my-4 mb-0 text-center text-white bg-[#0066ff] font-semibold rounded-xl duration-200 hover:bg-violet-800 hover:border-violet-800 hover:scale-110">
+                        View Job
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest Job posts -->
+    <section id="latestJob">
+        <div class="container m-10 mx-20">
+            <h2 class="text-[32px] font-semibold text-blue-800">Latest Jobs</h2>
+        </div>
+        <div class="flex justify-center mx-20 mb-10">
+            <!-- <div class="grid gap-4 m-10 mx-20 md:flex items-center justify-between space-x-6 mx-4"> -->
+            <div class="flex flex-col justify-center mx-auto space-y-16 px-6 md:flex-row md:space-y-0 md:items-center">
+                <!--job1-->
+                <div class="grid grid-cols-1 mt-6">
+                    <p class="text-red-500 text-[12px] font-semibold">
+                        UI Technical Architect
+                    </p>
+                    <p class="text-blue-800 text-[12px] font-semibold">Phillips</p>
+                    <p class="text-sm font-semibold text-blue-800">
+                        Exp :
+                        <span class="text-[12px] text-gray-500 font-normal">13+yrs</span>
+                    </p>
+                    <p class="text-[12px] font-semibold text-blue-800">
+                        Location :
+                        <span class="text-[12px] text-gray-500 font-normal">Hyderabad/
+                            Bnagalore /Coimbatore /Nagpur</span>
+                    </p>
+                    <p class="text-[12px] text-blue-800 font-semibold">
+                        Skills :
+                        <span class="text-[12px] text-gray-500 font-normal">HTML5, CSS3, BootStrap 4, JQuery, AngularJS,
+                            Node &
+                            ReactJS</span>
+                    </p>
+                    <button class="mt-10 text-md font-semibold text-blue-700 md:ml-20 hover:scale-110">
+                        View Job
+                    </button>
+                </div>
+
+                <div class="hidden grid grid-cols-1 md:block md:mr-4">
+                    <div class="mt-6 h-0 w-0 border-x-8 mt-0 border-x-transparent border-b-[12px] border-yellow-500">
+                    </div>
+                    <div class="border-dashed border-2 ml-1.5 w-0 h-48 border-yellow-500"></div>
+                    <div
+                        class="mt-0 h-0 w-0 border-x-8 mt-0 rotate-180 border-x-transparent border-b-[12px] border-yellow-500">
+                    </div>
+                </div>
+
+                <!--job2-->
+                <div class="grid grid-cols-1">
+                    <p class="text-red-500 text-[12px] font-semibold">
+                        Senior Software Engineer
+                    </p>
+                    <p class="text-blue-800 text-[12px] font-semibold">Procter & Gamble</p>
+                    <p class="text-sm font-semibold text-blue-800">
+                        Exp : <span class="text-[12px] text-gray-500 font-normal">5+yrs</span>
+                    </p>
+                    <p class="text-[12px] font-semibold text-blue-800">
+                        Location :
+                        <span class="text-[12px] text-gray-500 font-normal">Chennai</span>
+                    </p>
+                    <p class="text-[12px] text-blue-800 font-semibold">
+                        Skills :
+                        <span class="text-[12px] text-gray-500 font-normal">Proven experience in C# (R, min 10 Years),
+                            HTML5, CSS3, BootStrap 4, JQuery, AngularJS</span>
+                    </p>
+
+                    <button class="mt-10 text-md font-semibold text-blue-700 md:ml-20 hover:scale-110">
+                        View Job
+                    </button>
+                </div>
+
+                <div class="hidden grid grid-cols-1 md:block md:mr-4">
+                    <div class="mt-6 h-0 w-0 border-x-8 mt-0 border-x-transparent border-b-[12px] border-yellow-500">
+                    </div>
+                    <div class="border-dashed w-0 ml-1.5 border-2 h-48 border-yellow-500"></div>
+                    <div
+                        class="mt-0 h-0 w-0 border-x-8 rotate-180 mt-0 border-x-transparent border-b-[12px] border-yellow-500">
+                    </div>
+                </div>
+
+                <!--job3-->
+                <div class="grid grid-cols-1">
+                    <p class="text-red-500 text-[12px] font-semibold mt-4">
+                        Senior Solution Architect
+                    </p>
+                    <p class="text-blue-800 text-[12px] font-semibold">Nokia</p>
+                    <p class="text-sm font-semibold text-blue-800">
+                        Exp :
+                        <span class="text-[12px] text-gray-500 font-normal">16+yrs</span>
+                    </p>
+                    <p class="text-[12px] font-semibold text-blue-800">
+                        Location :
+                        <span class="text-[12px] text-gray-500 font-normal">Hyderabad/
+                            Bnagalore /Coimbatore /Nagpur</span>
+                    </p>
+                    <p class="text-[12px] text-blue-800 font-semibold">
+                        Skills :
+                        <span class="text-[12px] text-gray-500 font-normal">Java, Spring, Docker, Kubernet, Kafka and
+                            OpenAPI</span>
+                    </p>
+                    <button class="text-md font-semibold text-blue-700 mt-10 md:ml-20 hover:scale-110">
+                        View Job
+                    </button>
+                </div>
+
+                <div class="hidden grid grid-cols-1 md:block md:mr-4">
+                    <div class="mt-6 h-0 w-0 border-x-8 mt-0 border-x-transparent border-b-[12px] border-yellow-500">
+                    </div>
+                    <div class="border-dashed w-0 ml-1.5 border-2 h-48 border-yellow-500"></div>
+                    <div
+                        class="mt-0 h-0 w-0 border-x-8 mt-0 rotate-180 border-x-transparent border-b-[12px] border-yellow-500">
+                    </div>
+                </div>
+
+                <!--job4-->
+                <div class="grid grid-cols-1">
+                    <p class="text-red-500 text-[12px] font-semibold mt-4">Project Manager</p>
+                    <p class="text-blue-800 text-[12px] font-semibold">Mondelez</p>
+                    <p class="text-[12px] font-semibold text-blue-800">
+                        Exp :
+                        <span class="text-[12px] text-gray-500 font-normal">20+yrs</span>
+                    </p>
+                    <p class="text-[12px] font-semibold text-blue-800">
+                        Location :
+                        <span class="text-[12px] text-gray-500 font-normal">Hyderabad/
+                            Bnagalore /Coimbatore /Nagpur</span>
+                    </p>
+                    <p class="text-[12px] text-blue-800 font-semibold">
+                        Skills :
+                        <span class="text-[12px] text-gray-500 font-normal">Strong knowledge of HTML, Javascript,
+                            CSS</span>
+                    </p>
+                    <button class="text-md font-semibold text-blue-700 mt-10 md:ml-20 hover:scale-110">
+                        View Job
+                    </button>
+                </div>
+
+                <div class="hidden grid grid-cols-1 md:block md:mr-4">
+                    <div class="mt-6 h-0 w-0 border-x-8 mt-0 border-x-transparent border-b-[12px] border-yellow-500">
+                    </div>
+                    <div class="border-dashed w-0 ml-1.5 border-2 h-48 border-yellow-500"></div>
+                    <div
+                        class="mt-0 h-0 w-0 border-x-8 rotate-180 mt-0 border-x-transparent border-b-[12px] border-yellow-500">
+                    </div>
+                </div>
+
+                <!--job5-->
+                <div class="grid grid-cols-1">
+                    <p class="text-red-500 text-[12px] font-semibold mt-6">Delivery Manager</p>
+                    <p class="text-blue-800 text-[12px] font-semibold">L&T</p>
+                    <p class="text-[12px] font-semibold text-blue-800">
+                        Exp :
+                        <span class="text-[12px] text-gray-500 font-normal">18+yrs</span>
+                    </p>
+                    <p class="text-sm font-semibold text-blue-800">
+                        Location :
+                        <span class="text-[12px] text-gray-500 font-normal">Hyderabad/
+                            Bnagalore /Coimbatore /Nagpur</span>
+                    </p>
+                    <p class="text-[12px] text-blue-800 font-semibold">
+                        Skills :
+                        <span class="text-[12px] text-gray-500 font-normal">HTML5, CSS3, BootStrap 4, JQuery, AngularJS,
+                            Node &
+                            ReactJS</span>
+                    </p>
+                    <button class="text-md font-semibold text-blue-700 mt-10 md:ml-20 hover:scale-110">
+                        View Job
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="jobposts">
+        <div class="container mx-20 mt-16 mb-10">
+            <h2 class="mb-6 text-4xl font-semibold text-blue-800 md:mb-1">Discover jobs across LTIMindtree roles</h2>
+        </div>
+        <div class="grid gap-4 mx-20 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            <div class="p-2 border-2 rounded-tr-xl rounded-bl-xl bg-white border-[#D32f2f] hover:scale-110">
+                <p class="text-center text-blue-800 font-semibold text-sm">
+                    Software Engineer
+                </p>
+                <p class="text-center text-sm text-gray-300">25+ Jobs</p>
+            </div>
+
+            <div class="p-2 border-2 rounded-tr-xl rounded-bl-xl border-[#8dc63f] hover:scale-110">
+                <p class="text-center text-blue-800 font-semibold text-sm">
+                    Senior Software Engineer
+                </p>
+                <p class="text-center text-sm text-gray-300">12+ Jobs</p>
+            </div>
+            <div class="p-2 border-2 rounded-tr-xl rounded-bl-xl border-[#663399] hover:scale-110">
+                <div class="text-center text-blue-800 font-semibold text-sm">
+                    Module Lead
+                </div>
+                <p class="text-center text-sm text-gray-300">10+ Jobs</p>
+            </div>
+            <div class="p-2 border-2 rounded-tr-xl rounded-bl-xl border-[#663399] hover:scale-110">
+                <div class="text-center text-blue-800 font-semibold text-sm">
+                    Senior Technical Specialist
+                </div>
+                <p class="text-center text-sm text-gray-300">5+ Jobs</p>
+            </div>
+            <div class="p-2 border-2 rounded-tr-xl rounded-bl-xl border-[#00bceb] hover:scale-110">
+                <div class="text-center text-blue-800 font-semibold text-sm">
+                    Technical Specialist
+                </div>
+                <p class="text-center text-sm text-gray-300">23+ Jobs</p>
+            </div>
+            <div class="p-2 border-2 rounded-tr-xl rounded-bl-xl border-[#8b008b] hover:scale-110">
+                <div class="text-center text-blue-800 font-semibold text-sm">
+                    Project Lead
+                </div>
+                <p class="text-center text-sm text-gray-300">18+ Jobs</p>
+            </div>
+            <div class="p-2 border-2 rounded-tr-xl rounded-bl-xl border-[#8b4513] hover:scale-110">
+                <p class="text-center text-blue-800 font-semibold text-sm">
+                    Senior Technical Manager
+                </p>
+                <p class="text-center text-sm text-gray-300">18+ Jobs</p>
+            </div>
+
+            <div class="p-2 border-2 rounded-tr-xl rounded-bl-xl border-[#fbbc05] hover:scale-110">
+                <p class="text-center text-blue -800 font-semibold text-sm">
+                    Scrum Lead
+                </p>
+                <p class="text-center text-sm text-gray-300">18+ Jobs</p>
+            </div>
+
+            <div class="p-2 border-2 rounded-tr-xl rounded-bl-xl border-[#ff6347] hover:scale-110">
+                <p class="text-center text-blue-800 font-semibold text-sm">
+                    Architect
+                </p>
+                <p class="text-center text-sm text-gray-300">18+ Jobs</p>
+            </div>
+
+            <div class="p-2 border-2 rounded-tr-xl rounded-bl-xl border-[#000080] hover:scale-110">
+                <p class="text-center text-blue-800 font-semibold text-sm">
+                    Program manager
+                </p>
+                <p class="text-center text-sm text-gray-300">18+ Jobs</p>
+            </div>
+
+            <div class="p-2 border-2 rounded-tr-xl rounded-bl-xl border-[#9400d3] hover:scale-110">
+                <p class="text-center text-blue-800 font-semibold text-sm">
+                    Senior Project Manager
+                </p>
+                <p class="text-center text-sm text-gray-300">18+ Jobs</p>
+            </div>
+            <div class="p-2 border-2 rounded-tr-xl rounded-bl-xl border-[#fbbc05] hover:scale-110">
+                <p class="text-center text-blue-800 font-semibold text-sm">
+                    Team Lead
+                </p>
+                <p class="text-center text-sm text-gray-300">18+ Jobs</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="mx-10 mt-16  mb-10 md:mx-20">
+            <h2 class="mb-6 text-4xl font-semibold text-blue-800">Grow your carrier through Yorbit Learning</h2>
+        </div>
+        <div class="flex justify-center mt-16 mb-10 mx-4 md:mx-20">
+            <div class="flex flex-col items-center justify-between mx-auto space-y-16 py-4 md:flex-row md:space-y-0">
+                <div class="flex justify-center hover:border-4 hover:border-gray-500">
+                    <img class="w-full" src="./images/picture1.PNG" alt="">
+                </div>
+                <div class="flex justify-center items-center mt-10 mb-10 px-2 md:py-24">
+                    <div class="flex justify-center w-16 h-16 rounded-full ring-2 ring-[#f2f2f2] hover:ring-gray-400">
+                        <div
+                            class="mt-6 h-0 w-0 border-x-8 rotate-[-90deg] border-x-transparent border-b-[12px] border-gray-200">
+                        </div>
+                    </div>
+                </div>
+                <!-- Inner Container -->
+                <div class="flex flex-col space-x-4 space-y-6 px-4 md:space-y-0 md:space-x-6 md:flex-row md:my-0 md:w-3/4">
+                    <!-- Col 1 -->
+
+                    <div class="border-2 border-[#80ff80] rounded-t-xl hover:border-[#2db300]">
+                        <!-- Upper Container -->
+                        <div class="pt-3 rounded-t-xl bg-[#80ff80] hover:bg-[#2db300]">
+                            <div class="text-center font-semibold text-5xl text-white">201</div>
+                            <div class="flex justify-center">
+                                <p class="m-2 font-serif text-center text-lg text-gray-800">Angular - Learning Package
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Border -->
+                        <div class="border-t border-[#80ff80]"></div>
+
+                        <!-- Lower Container -->
+                        <div class="p-2 bg-[#ffffff]">
+                            <!-- List Container -->
+                            <div class="flex flex-col">
+                                <!-- List Item 1 -->
+                                <div class="flex justify-center">
+                                    <p class="m-2 text-center text-gray-800">This spackage will teach you pre-request of
+                                        Angular
+                                        and all the fundamentals about modules, directives, components, databinding,
+                                        routing, HTTP access etc..</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="border-2 border-[#4da6ff] rounded-t-xl hover:border-[#6600ff]">
+                        <!-- Upper Container -->
+                        <div class="pt-3 rounded-t-xl bg-[#4da6ff] hover:bg-[#6600ff]">
+                            <div class="text-center font-semibold text-5xl text-white">301</div>
+                            <div class="flex justify-center">
+                                <p class="m-2 font-serif text-center text-lg text-gray-800">Xamarin Certified mobile
+                                    developer
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Border -->
+                        <div class="border-t border-[#80ff80]"></div>
+
+                        <!-- Lower Container -->
+                        <div class="p-2 bg-[#ffffff]">
+                            <!-- List Container -->
+                            <div class="flex flex-col">
+                                <!-- List Item 1 -->
+                                <div class="flex justify-center">
+                                    <p class="m-2 text-center text-gray-800">The Xamarine Certified mobile developer
+                                        will
+                                        help
+                                        you
+                                        to learn core principles of Xamarine developemnt. It covers topic ranging across
+                                        Xamarin.iOS.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-2 border-[#e6e600] font rounded-t-xl hover:border-[#FF9900]">
+                        <!-- Upper Container -->
+                        <div class="pt-3 rounded-t-xl bg-[#e6e600] font-calibri hover:bg-[#FF9900]">
+                            <div class="text-center font-semibold text-5xl text-white">101</div>
+                            <div class="flex justify-center">
+                                <p class="m-2 font-serif text-center text-lg text-gray-800">React JS Basic Learning</p>
+                            </div>
+                        </div>
+
+                        <!-- Border -->
+                        <div class="border-t border-[#80ff80]"></div>
+
+                        <!-- Lower Container -->
+                        <div class="p-2 bg-[#ffffff]">
+                            <!-- List Container -->
+                            <div class="flex flex-col">
+                                <!-- List Item 1 -->
+                                <div class="flex justify-center">
+                                    <p class="m-2 text-center text-gray-800">This is an introductory course which covers
+                                        basics of React JS with cool demos. Learn the concept by watching the videos and
+                                        appear for the internal quiz.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center mt-10 mx-2  md:py-24">
+                    <div class="flex justify-center w-16 h-16 rounded-full ring-2 ring-[#f2f2f2] hover:ring-gray-400">
+                        <div
+                            class="mt-6 h-0 w-0 border-x-8 rotate-90 border-x-transparent border-b-[12px] border-gray-200">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+    <div class="flex justify-between border-dashed border border-gray-500"></div>
+
+    <footer class="mx-6 py-2 border-gray-400">
+        <div class="flex flex-col items-center justify-between mx-auto space-y-16 py-4 px-6 md:flex-row md:space-y-0">
+            <!-- Logo -->
+            <div class="z-30 mt-6 mb-6">
+                <img class="h-15 w-25" src="images/L&T_logo.PNG" alt="" id="logo" />
+            </div>
+
+            <!-- Social media connect -->
+            <div class="flex space-x-6 mb-6">
+                <!--   -->
+                <a href="#">
+                    <img src="./images/linkedin-icon.png" alt="" class="h-6 ficon" />
+                </a>
+                <a href="#">
+                    <img src="./images/twitter_icon.png" alt="" class="h-6 ficon" />
+                </a>
+                <a href="#">
+                    <img src="./images/youtube_icon.png" alt="" class="h-6 ficon" />
+                </a>
+                <a href="#">
+                    <img src="./images/facebook_icon.png" alt="" class="h-6 ficon" />
+                </a>
+                <a href="#">
+                    <img src="./images/instagram_grey_icon.png" alt="" class="h-6 ficon" />
+                </a>
+                <a href="#">
+                    <img src="./images/mailbox_icon.png" alt="" class="h-6 ficon" />
+                </a>
+            </div>
+            <!-- Menu Items -->
+            <div class="items-center space-x-6 mb-6 font-semibold text-sm text-grayishBlue">
+                <div class="flex items-center space-x-2 text-grayishBlue md:flex">
+                    <a href="#Blog" class="text-softBlue hover:text-softRed">Blogs</a>
+                    <div class="items-center space-x-2 text-grayishBlue md:flex">
+                        |
+                    </div>
+                    <a href="#Carriers" class="text-softBlue hover:text-softRed">Carriers</a>
+                    <a href="#Company" class="text-softBlue hover:text-softRed">Company</a>
+                    <div class="items-center space-x-2 text-grayishBlue md:flex">
+                        |
+                    </div>
+                    <a href="#Investers" class="text-softBlue hover:text-softRed">Investers</a>
+                    <div class="items-center space-x-2 text-grayishBlue md:flex">
+                        |
+                    </div>
+                    <a href="#Newsletters" class="text-softBlue hover:text-softRed">Newsletters</a>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center mt-4 text-blue-700">
+            <p>@ 2022 LTIMindtree Limited</p>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
